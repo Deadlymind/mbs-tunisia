@@ -1,11 +1,13 @@
+import Aside from "./Aside";
 
 
-function ParentComponent() {
+function ParentComponent(props) {
 
 
     return (
         <div>
-         
+           {/* <Header /> */}
+            <Aside />
         </div>
     );
 }
