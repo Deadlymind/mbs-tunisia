@@ -11,7 +11,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 
 
-export default function Aside() {
+export default function Aside({ asideOpen, handleAsideOpen }) {
         
         const router = useRouter();
 
@@ -35,7 +35,7 @@ export default function Aside() {
   
         return <>
 
-        <aside className="asideleft active">
+        <aside className={ asideOpen ? "asideleft active" : "asideleft" }>
                 <ul>
                         <Link href="/">
                                 <li className="navactive">
@@ -113,6 +113,7 @@ export default function Aside() {
                                 </li>
                         </Link>
                 </ul>
+                <button className="logoutbtn" >Logout</button>
         </aside>
 
         </>
